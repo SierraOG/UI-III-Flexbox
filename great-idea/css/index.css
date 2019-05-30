@@ -3,64 +3,403 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+blockquote,
+q {
+  quotes: none;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    font-family: 'Titillium Web', sans-serif;
+html,
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
-/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+/* Your code starts here! */
+
+h2 {
+  font-family: "Anton", sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: rgb(176, 177, 178);
+}
+
+.static-navbar nav {
+  display: flex;
+  justify-content: space-around;
+  width: 880px;
+  color: lightgray;
+  align-items: center;
+  margin: 10px auto 0 auto;
+}
+
+img {
+  margin-top: 25px;
+}
+
+.website-wrapper {
+  width: 880px;
+  margin: 30px auto 0 auto;
+  z-index: 1;
+}
+
+header {
+  border-bottom: 1px solid black;
+  position: relative;
+  height: 100px;
+  width: 880px;
+  margin: 30px auto 0 auto;
+  z-index: 1;
+}
+
+header div {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 50px 0 0 85px;
+}
+
+header div h1 {
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+
+header div h1 span {
+  display: block;
+}
+
+header div a {
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 4px 48px;
+}
+
+header img {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+
+.section-one {
+  margin-top: 39px;
+}
+
+.section-one div {
+  width: 430px;
+  height: 100px;
+  display: inline-block;
+}
+
+.section-one div p {
+  line-height: 1.16;
+}
+
+.section-one div:first-child {
+  margin-right: 10px;
+}
+
+.middle-img {
+  margin-top: 38px;
+}
+
+.section-two {
+  border-bottom: 1px solid black;
+  margin-top: 36px;
+  padding-bottom: 47px;
+}
+
+.section-two div {
+  display: inline-block;
+  width: 280px;
+  margin-right: 10px;
+}
+
+.section-two div p {
+  line-height: 1.16;
+}
+
+address {
+  margin-top: 38px;
+}
+
+address div {
+  line-height: 1.16;
+}
+
+address div span {
+  display: inline-block;
+  margin: 17px 0 18px 0;
+}
+
+footer {
+  width: 100%;
+  height: 183px;
+  text-align: center;
+  width: 880px;
+  margin: 30px auto 0 auto;
+  z-index: 1;
+}
+
+footer p {
+  margin-top: 54px;
+  font-size: 14px;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-around;
+  width: 880px;
+  margin: 20px auto 0 auto;
+  z-index: 1;
+  height: 250px;
+}
+
+.midSection {
+  display: flex;
+  justify-content: space-around;
+  width: 880px;
+  margin: 10px auto 0 auto;
+  z-index: 1;
+  height: 250px;
+}
+
+.bottomSection {
+  display: flex;
+  justify-content: space-around;
+  width: 880px;
+  margin: 10px auto 0 auto;
+  z-index: 1;
+  height: 250px;
+}
+
+.facts {
+  margin: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 400px;
+  z-index: 1;
+}
+
+.serviceDiv {
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  border: 1px solid black;
+  background-color: rgb(240, 239, 239);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.serviceDiv a {
+  margin: 10px;
+  width: 100px;
+  height: 35px;
+  border: 1px solid black;
+  border-radius: 7px;
+  background-color: white;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.serviceDiv p {
+  margin: 10px;
+}
+
+.serviceDiv h1 {
+  margin: 10px;
+}
+
+hr {
+  border-top: 1.5px solid black;
+  width: 880px;
+}
+
+.veryBottom {
+  display: flex;
+  justify-content: space-between;
+  width: 880px;
+  margin: 30px auto 0 auto;
+  z-index: 1;
+}
+
+.facts p {
+  margin: 10px;
+  margin-left: 0px;
+}
+
+.facts ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.facts li {
+  margin: 10px auto;
+}
+
+.indexDiv {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  width: 400px;
+  text-align: center;
+  justify-content: center;
+}
+
+.indexDiv a {
+  margin: 10px;
+  width: 150px;
+  height: 45px;
+  border: 1px solid black;
+  background-color: white;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  margin-left: 120px;
+}
+
+.index-header {
+  display: flex;
+  width: 880px;
+  margin: 10px;
+  height: 500px;
+}
